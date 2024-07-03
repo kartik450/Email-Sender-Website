@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container {
+            width: 3996px; /* Example container width */
+            height: 2668px; /* Example container height */
+            background-image: url('your-background-image-url.jpg'); /* Replace with your image URL */
+            background-size: cover; /* This will make sure the background image covers the entire container */
+            background-position: center; /* Center the background image */
+            /* Other background properties can be set here */
+        }
+        body {
+            background-image: url('{{ url_for("static", filename="picc.jpg") }}');
+            background-size: cover; /* Makes sure the background image covers the entire page */
+            background-repeat: no-repeat; /* Prevents the background image from repeating */
+        }
+    </style>
+    <title>Email sender</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    
+    <h1>Email Sender</h1>
+    <br><br>
+    <form action="{{ url_for('user_inputs') }}" method="post">
+        <input type="text" name="Sender_Email" placeholder="Enter Your Email" class="styled-input">
+        <br><br>
+        
+        <input type="text" name="Sender_Pass" placeholder="Enter Your Email Password" class="styled-input">
+        <br><br>
+        <input type="text" name="Email_id" placeholder="Enter Email" class="styled-input">
+        <br><br>
+        <input type="text" name="Subject" placeholder="Subject" class="styled-input">
+        <br><br>
+        <input type="text" name="Message" placeholder="Enter Message" class="styled-input">
+        <br><br>
+        <button type="submit" class="styled-button">Submit</button>
+
+    </form>
+</body>
+</html>
