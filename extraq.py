@@ -1,0 +1,5 @@
+sender_email=""
+sender_pass=""
+receiver_email=""
+subject=""
+message=""
